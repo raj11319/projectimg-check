@@ -172,11 +172,11 @@ const Hero = () => {
           <Parallax 
             translateY={[-10, 10]} 
             speed={-1} 
-            className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2"
+            className="w-full lg:w-1/2 flex justify-center items-start order-1 lg:order-2"
           >
             <motion.div 
               variants={imageVariants}
-              className="relative w-full max-w-sm lg:max-w-md"
+              className="relative w-full max-w-xs lg:max-w-sm"
             >
               {/* Subtle glow effect with reduced intensity */}
               <motion.div 
@@ -193,7 +193,7 @@ const Hero = () => {
               />
               
               <motion.div 
-                className="relative bg-gray-800/90 backdrop-blur-lg rounded-full overflow-hidden p-2 shadow-xl subtle-border"
+                className="relative bg-gray-800/90 backdrop-blur-lg rounded-full overflow-hidden p-2 shadow-xl subtle-border aspect-square"
                 whileHover={{ 
                   scale: 1.03,
                   rotate: 1
@@ -207,7 +207,7 @@ const Hero = () => {
                 <motion.img 
                   src="/images/raj_profile.jpg" 
                   alt="Raj Srivastava" 
-                  className="w-full h-auto rounded-full"
+                  className="w-full h-full object-cover rounded-full"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   onError={(e) => {
