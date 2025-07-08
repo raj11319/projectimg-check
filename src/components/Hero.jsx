@@ -185,11 +185,16 @@ const Hero = () => {
                   scale: [1, 1.1, 1],
                   rotate: [0, 180, 360]
                 }}
-                transition={{ 
+                src="/images/raj_profile.jpg" 
                   duration: 12, 
                   repeat: Infinity,
                   ease: "linear"
                 }}
+                onError={(e) => {
+                  console.log('Image failed to load:', e.target.src);
+                  e.target.src = 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
+                }}
+                onLoad={() => console.log('Profile image loaded successfully')}
               />
               
               <motion.div 
